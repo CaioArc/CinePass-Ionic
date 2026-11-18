@@ -10,7 +10,7 @@ export const routes: Routes = [
       { path: 'home', loadComponent: () => import('./pages/home/home.page').then((module) => module.HomePage) },
       { path: 'filmes', loadComponent: () => import('./pages/filmes/filmes.page').then((module) => module.FilmesPage) },
       { path: 'detalhes/:id', loadComponent: () => import('./pages/detalhes/detalhes.page').then((module) => module.DetalhesPage) },
-      { path: 'sessoes', loadComponent: () => import('./pages/sessoes/sessoes.page').then((module) => module.SessoesPage) },
+      { path: 'sessoes/:id', loadComponent: () => import('./pages/sessoes/sessoes.page').then((module) => module.SessoesPage) },
       { path: 'ingressos', loadComponent: () => import('./pages/ingressos/ingressos.page').then((module) => module.IngressosPage) },
       { path: 'poltronas', loadComponent: () => import('./pages/poltronas/poltronas.page').then((module) => module.PoltronasPage) },
       { path: 'resumo', loadComponent: () => import('./pages/resumo/resumo.page').then((module) => module.ResumoPage) },
