@@ -1,1 +1,37 @@
-:root{--ion-color-primary:#7a1838;--ion-color-primary-rgb:122,24,56;--ion-color-primary-contrast:#fff;--ion-color-primary-contrast-rgb:255,255,255;--ion-color-primary-shade:#6b1531;--ion-color-primary-tint:#872f4c;--ion-background-color:#f7f5f3;--ion-text-color:#201c1e}
+:root {
+  color-scheme: dark;
+  --cp-background: #0a0a0c;
+  --cp-surface: #131316;
+  --cp-surface-raised: #1b1b20;
+  --cp-border: #29292f;
+  --cp-border-strong: #414149;
+  --cp-text: #f5f3f4;
+  --cp-muted: #a3a0a4;
+  --cp-subtle: #77747a;
+  --cp-accent: #e51b3e;
+  --cp-accent-hover: #f02b4d;
+  --cp-accent-soft: rgba(229, 27, 62, .14);
+  --cp-content-width: 1200px;
+  --cp-radius-card: 14px;
+  --cp-space-1: 4px;
+  --cp-space-2: 8px;
+  --cp-space-3: 12px;
+  --cp-space-4: 16px;
+  --cp-space-6: 24px;
+  --cp-space-8: 32px;
+  --ion-font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+  --ion-background-color: var(--cp-background);
+  --ion-background-color-rgb: 10, 10, 12;
+  --ion-text-color: var(--cp-text);
+  --ion-text-color-rgb: 245, 243, 244;
+  --ion-toolbar-background: var(--cp-surface);
+  --ion-toolbar-color: var(--cp-text);
+  --ion-item-background: var(--cp-surface);
+  --ion-card-background: var(--cp-surface);
+  --ion-color-primary: var(--cp-accent);
+  --ion-color-primary-rgb: 229, 27, 62;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #ca1836;
+  --ion-color-primary-tint: #e83351;
+}
