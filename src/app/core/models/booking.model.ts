@@ -2,6 +2,7 @@ import { Movie } from './movie.model';
 
 export type ScreeningType = '2D' | '3D' | 'IMAX';
 export type TicketCategory = 'inteira' | 'meia' | 'estudante' | 'idoso';
+export type SeatStatus = 'available' | 'occupied' | 'selected';
 
 export interface Cinema {
   id: string;
@@ -31,10 +32,23 @@ export interface TicketSelection {
   quantity: number;
 }
 
+export interface Seat {
+  id: string;
+  row: string;
+  number: number;
+}
+
 export interface BookingDraft {
   movie: Movie | null;
   session: Session | null;
   tickets: TicketSelection[];
+  seats: Seat[];
+}
+
+export interface CompletedBooking extends BookingDraft {
+  bookingId: string;
+  finalizedAt: string;
+  total: number;
 }
 
 export const DEFAULT_TICKETS: TicketSelection[] = [

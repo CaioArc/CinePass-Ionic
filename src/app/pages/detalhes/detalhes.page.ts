@@ -1,4 +1,5 @@
-import { DatePipe, DecimalPipe } from '@angular/common';
+import { DatePipe } from '@angular/common';
+import { RatingPipe } from '../../pipes/rating.pipe';
 import { Component, OnInit, inject, signal } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { IonButton } from '@ionic/angular/standalone';
@@ -8,7 +9,7 @@ import { MovieService } from '../../core/services/movie.service';
 @Component({
   selector: 'app-detalhes',
   standalone: true,
-  imports: [DatePipe, DecimalPipe, RouterLink, IonButton],
+  imports: [DatePipe, RatingPipe, RouterLink, IonButton],
   template: `
     <main class="details-page">
       @if (loading()) {
@@ -43,7 +44,7 @@ import { MovieService } from '../../core/services/movie.service';
             </div>
             <div class="details-copy">
               <div class="facts">
-                @if (details.rating > 0) { <span class="rating">{{ details.rating | number: '1.1-1' }}/10</span> }
+                @if (details.rating > 0) { <span class="rating">{{ details.rating | rating }}</span> }
                 @if (details.releaseDate) { <time>{{ details.releaseDate | date: 'dd/MM/yyyy' }}</time> }
                 @if (details.runtime) { <span>{{ details.runtime }} min</span> }
                 @if (details.adult) { <span class="adult-label">Conteúdo adulto</span> }
